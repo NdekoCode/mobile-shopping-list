@@ -1,7 +1,7 @@
 import { Text, View } from "react-native";
 import styles from "../styles/globals";
 
-const ProductItem = ({ item }) => {
+export const ProductItem = ({ item }) => {
   return (
     <View style={styles.productItem}>
       <Text>
@@ -11,4 +11,3 @@ const ProductItem = ({ item }) => {
     </View>
   );
 };
-export default ProductItem;

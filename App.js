@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import styles from "./styles/globals";
 import { useState } from "react";
-import ProductList from "./components/ProductList";
+import { ProductForm, ProductList } from "./components";
 
 export default function App() {
   const [productName, setProductName] = useState({
@@ -17,6 +17,7 @@ export default function App() {
   });
   const [products, setProducts] = useState([]);
   const handleTextChange = (text) => {
+    console.log(text);
     setProductName((prevState) => ({
       ...prevState,
       name: text,
@@ -35,15 +36,11 @@ export default function App() {
       <View style={styles.viewText}>
         <Text style={styles.textTitle}>Hello shopping card</Text>
       </View>
-      <View style={styles.inputContainer}>
-        <TextInput
-          value={productName.name}
-          style={styles.textInput}
-          placeholder="Enter the name of the product"
-          onChangeText={handleTextChange}
-        ></TextInput>
-        <Button title="Valider" style={styles.button} onPress={handlePress} />
-      </View>
+      <ProductForm
+        product={productName}
+        onChange={handleTextChange}
+        handlePress={handlePress}
+      />
       <ProductList products={products} />
     </View>
   );
