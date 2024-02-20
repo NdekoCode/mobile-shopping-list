@@ -12,11 +12,9 @@ import { ProductForm, ProductList } from "./components";
 
 export default function App() {
   const [products, setProducts] = useState([]);
-  const handlePress = (product, setProductName) => {
-    console.log("Button pressed");
+  const handlePress = (product) => {
     if (product.name.trim().length > 1) {
       setProducts((prevState) => [product, ...prevState]);
-      setProductName((prev) => ({ ...prev, name: "", id: "" }));
     }
   };
   return (

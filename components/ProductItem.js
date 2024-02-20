@@ -3,7 +3,7 @@ import styles from "../styles/globals";
 
 export const ProductItem = ({ item }) => {
   return (
-    <View style={styles.productItem}>
+    <View style={styles.productItem} onPress={() => console.log("Pressed")}>
       <Text>
         {" "}
         Name of the product {item.id}: {item.name}
