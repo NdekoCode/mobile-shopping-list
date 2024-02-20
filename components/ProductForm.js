@@ -15,6 +15,13 @@ export const ProductForm = ({ handlePress }) => {
       id: Date.now().toString(),
     }));
   };
+  const handleSubmit = (e) => {
+    handlePress(product);
+    setProduct({
+      name: "",
+      id: "",
+    });
+  };
   return (
     <View style={styles.inputContainer}>
       <TextInput
@@ -23,11 +30,7 @@ export const ProductForm = ({ handlePress }) => {
         placeholder="Enter the name of the product"
         onChangeText={handleTextChange}
       ></TextInput>
-      <Button
-        title="Valider"
-        style={styles.button}
-        onPress={(e) => handlePress(product, handleTextChange)}
-      />
+      <Button title="Valider" style={styles.button} onPress={handleSubmit} />
     </View>
   );
 };
