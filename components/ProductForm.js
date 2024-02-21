@@ -1,4 +1,12 @@
-import { Alert, Button, Modal, Text, TextInput, View } from "react-native";
+import {
+  Alert,
+  Button,
+  Modal,
+  Pressable,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 import styles from "../styles/globals";
 import { useEffect, useState } from "react";
 
@@ -73,8 +81,24 @@ export const ProductForm = ({ handlePress, clearProducts }) => {
         style={{ height: "auto" }}
         onRequestClose={() => setIsValid(false)}
       >
-        <Text>Votre produit a eté ajouter</Text>
-        <Button title="Close" onPress={() => setIsValid(false)} />
+        <View style={styles.modalContainer}>
+          <View style={styles.modalContent}>
+            <View style={styles.modalHeader}>
+              <Text>OUPS</Text>
+            </View>
+            <View style={styles.modalBody}>
+              <Text style={{ fontWeight: "500" }}>
+                Votre produit a eté ajouter
+              </Text>
+            </View>
+            <Pressable
+              style={styles.pressableButton}
+              onPress={() => setIsValid(false)}
+            >
+              <Text style={styles.pressableButton.text}>Close</Text>
+            </Pressable>
+          </View>
+        </View>
       </Modal>
     </>
   );

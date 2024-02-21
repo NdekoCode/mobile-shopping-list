@@ -56,6 +56,52 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: "500",
   },
+  textWhite: {
+    color: "white",
+  },
+  modalContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0,0,0,0.2)",
+  },
+  modalContent: {
+    borderRadius: 10,
+    width: "85%",
+    overflow: "hidden",
+    backgroundColor: "white",
+  },
+
+  modalHeader: {
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    height: 40,
+    borderBottomColor: "#eded",
+    borderBottomWidth: 1,
+    color: "white",
+    fontWeight: "600",
+  },
+  modalBody: {
+    padding: 20,
+    height: 100,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  pressableButton: {
+    backgroundColor: "#20b2aa",
+    padding: 10,
+    text: {
+      color: "#fff",
+      textAlign: "center",
+      fontWeight: "500",
+      textTransform: "uppercase",
+    },
+  },
 });
 
 export default styles;
