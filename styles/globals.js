@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textInput: {
-    backgroundColor: "#fff",
+    backgroundColor: "white",
     borderWidth: 1,
     borderColor: "#eeeeee",
     borderStyle: "solid",
