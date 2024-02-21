@@ -79,6 +79,8 @@ export const ProductForm = ({ handlePress, clearProducts }) => {
       <Modal
         visible={isValid}
         style={{ height: "auto" }}
+        transparent={true}
+        animationType="slide"
         onRequestClose={() => setIsValid(false)}
       >
         <View style={styles.modalContainer}>
